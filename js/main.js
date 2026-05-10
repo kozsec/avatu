@@ -1,17 +1,10 @@
 async function loadComponent(id, file){
-
-  const response =
-    await fetch(file);
-
-  const html =
-    await response.text();
-
-  document.getElementById(id).innerHTML =
-    html;
+  const response = await fetch(file);
+  const html = await response.text();
+  document.getElementById(id).innerHTML = html;
 }
 
-/* 読み込み */
-
+/* HEADERとFOOTERをLOAD */
 loadComponent(
   "header",
   "./header.html"
