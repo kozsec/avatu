@@ -248,7 +248,7 @@ section{
 
 .movi-base{
 
-  opacity: 0.30;
+  opacity: 0.20;
 
   filter:
     grayscale(0.1)
@@ -284,7 +284,7 @@ section{
   filter:brightness(0.5);
 
   animation:
-    eyeGlow 3.5s infinite alternate;
+    eyeGlow 1.5s infinite alternate;
 }
 
 
@@ -445,54 +445,40 @@ section{
 
   letter-spacing:8px;
 
-  color:#040b59;
+  color:#051f89;
 
   animation:
-    flicker 2s infinite alternate,
-    textGlitch 0.12s infinite;
-
-  text-shadow:
-    0 0 4px rgba(0,0,0,0.15);
+    flicker 2s infinite alternate;
+  z-index: 0;
+  isolation: isolate;
 }
-
 .title::before,
-.title::after{
-
-  content:attr(data-text);
-
-  position:absolute;
-
-  top:0;
-  left:0;
-
-  width:100%;
-  height:100%;
-
-  pointer-events:none;
-
-  z-index:-1;
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
-
-/* BLUE */
-
-.title::before{
-
-  color:#00ff66;
-
-  transform:translate(4px,0);
-
-  opacity:0.45;
+.title::before {
+  color: #ff3cac;
+  transform: translate(-2px, 0);
+  clip-path: inset(0 0 55% 0);
+  animation: 
+  glitchTop 3.25s infinite,
+  textGlitch 1.5s infinite;
+  z-index: -1;
 }
-
-/* PINK */
-
-.title::after{
-
-  color:#ff3cac;
-
-  transform:translate(-3px,0);
-
-  opacity:0.45;
+.title::after {
+  color: #00ff66;
+  transform: translate(4px, 0);
+  clip-path: inset(35% 0 -20% 0);
+  animation: 
+  glitchBottom 2.35s infinite,
+  textGlitch 1.2s infinite;
+  z-index: -2;
 }
 
 /* SUBTITLE */
@@ -663,26 +649,42 @@ p{
   }
 }
 
+@keyframes glitchTop {
+  0% { transform: translate(-2px, 0); }
+  93% { transform: translate(-4px, -1px); }
+  95% { transform: translate(2px, 1px); }
+  96% { transform: translate(-1px, 0); }
+  100% { transform: translate(-3px, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translate(4px, 0); }
+  93% { transform: translate(4px, 1px); }
+  94% { transform: translate(-8px, -1px); }
+  96% { transform: translate(1px, 0); }
+  100% { transform: translate(3px, 0); }
+}
+
 @keyframes textGlitch{
 
   0%{
     transform:translate(0px,0px);
   }
 
-  20%{
-    transform:translate(-1px,0.2px);
+  93%{
+    transform:translate(-1px,1.2px);
   }
 
-  40%{
-    transform:translate(0.5px,-0.2px);
+  94%{
+    transform:translate(4.5px,-0.2px);
   }
 
-  60%{
+  95%{
     transform:translate(-0.8px,0px);
   }
 
-  80%{
-    transform:translate(1px,0.3px);
+  96%{
+    transform:translate(6px,0.3px);
   }
 
   100%{
@@ -705,17 +707,17 @@ p{
 
   0%{
 
-    opacity:0.10;
+    opacity:0.50;
 
     filter:
-      brightness(1.2);
+      brightness(2.2);
 
     transform:scale(1);
   }
 
   100%{
 
-    opacity:0.60;
+    opacity:0.80;
 
     filter:
       brightness(3.0);
