@@ -1,105 +1,120 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
-/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AVATU PROJECT</title>
-
-<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+<!-- 背景のチラチラ(scan line) -->
+<div class="scanlines"></div>
+<!-- ヘッダーメニュー -->
+<div id="header"></div>
 
+<main class="page">
 
-  <!-- scanline -->
-  <div class="scanlines"></div>
-
-  <!-- 固定メニュー -->
-  <div id="header"></div>
-  
-
-  <!-- ページ -->
-  <main class="page">
-
-    <!-- HERO -->
-    <section class="content hero">
+<!-- タイトル部 -->
+<section class="content hero">
 
   <!-- MOVI背景 -->
   <div class="hero-character">
 
     <!-- 本体 -->
-    <img
-      class="movi-base"
-      src="./img/movi.png"
-      alt="MOVI"
-    >
+    <img class="movi-base" src="./img/movi.png" alt="MOVI">
 
     <!-- 目 -->
-    <img
-      class="movi-eyes"
-      src="./img/movi_eyes.png"
-      alt=""
-    >
-
+    <img class="movi-eyes" src="./img/movi_eyes.png" alt="">
   </div>
 
   <!-- テキスト -->
   <div class="hero-content">
-
-    <h1
-      class="title"
-      data-text="AVATU PROJECT"
-    >
-      AVATU PROJECT
-    </h1>
-
-    <p class="subtitle">
-      サイバーセキュリティで平穏を守ろう
-    </p>
-
+    <h1 class="title" data-text="AVATU PROJECT">AVATU PROJECT</h1>
+    <p class="subtitle">サイバーセキュリティで平穏を守ろう</p>
   </div>
 
 </section>
 
-    <section class="content" id="about">
 
-      <h2>
-        ABOUT
-      </h2>
+<!-- 「ABOUT」セクション -->
+<section class="content" id="about">
+  <h1>ABOUT</h1>
+  <p>Avatuは「実践型サイバーセキュリティ体験ゲーム」です。</p>
+<br><hr><br><br>
+  <p><h2>MISSION（任務）</h2>
+あなたは6人チームの一員として、ある企業のセキュリティ運用任務に配属されます。<br>
+すでに当該システムは外部脅威の影響下にあり、複数のインシデント兆候が検知されている状態から任務は開始されます。<br>
+限られた時間の中で状況を分析し、対策を講じながらシステムを守り抜いてください。<br>
+<br>
+これは知識を問う試験ではありません。<br>
+あなたに求められるのは、単なる対応ではなく、変化する状況を前提に、対策を選択し、実行し、再評価し続ける運用判断です。<br>
+すでに進行している環境の中で、組織を維持するための実務シミュレーションであり、極めて現実に近いセキュリティ体験です。<br>
+あなたは「対策の実行」や「意思決定」を繰り返しながら、組織としての最適解を探っていきます。<br>
+<br>
+任務終了後、限られた時間の中で積み重ねた選択は、あなたの中に「守るための思考」として残っていくことでしょう。
+</p>
+<br><hr><br><br>
+<p><h2>ADVANTAGE（長所）</h2>
+1. 完全無料で参加できます。<br>
+2. シーズンごとに変化する攻撃手法を体験できます。<br>
+3. ハイスコア達成者へのささやかな特典があります。
+</p>
 
-      <p>
-        サイバーセキュリティのホニャホニャホニャホニャ
-      </p>
+</section>
 
-    </section>
+<section class="content"  id="seasons">
+  <h1>SEASON制度</h1>
+  <p>シーズンごとにゲーム環境が変わっていきます。1シーズンはおおよそ1年サイクルで回ります。</p>
+    <br><hr><br><br>
+    <p>
+    
+    <h2>SEASON #01: PROGRESS</h2>
+    Theme: <b>SMILE</b><br>
+    Status: <b>UNDER DEVELOPMENT</b><br>
+  </p>
+  <br>
+  <p>
+    <div class="season-bar">
 
-    <section class="content">
+    <div class="season-step done">
+      <div class="arrow">01</div>
+      <div class="season-label">開発<br>[now]</div>
+    </div>
 
-      <p>
-        <h2>SEASON #01</h2>
-        Theme: 笑顔<br>
-        Period：N/A<br>
+    <div class="season-step">
+      <div class="arrow">02</div>
+      <div class="season-label">ベータテスト</div>
+    </div>
+
+    <div class="season-step">
+      <div class="arrow">03</div>
+      <div class="season-label">開催</div>
+    </div>
+
+    <div class="season-step">
+      <div class="arrow">04</div>
+      <div class="season-label">終了</div>
+    </div>
+
+    </div>
+  </p>
+<br><hr><br><br>
+  <p>
+  <h2>SEASON #01: STORY</h2>
+参加者のみなさまは、架空企業 Movita株式会社 の一員となり、サイバー攻撃からシステムを守ります。<br>
+Movitaが運営している動画サイト「Avatube」や、自社ECサイト「Movibox」を狙うリアルなサイバー攻撃を体験し、自分の選択が企業の安全に直結する経験をしてください。<br>
+<br>
+Movita株式会社の社員一同、みなさまのご参加を心よりお待ちしております。
+
       </p>
       <br>
-      <p>
-        <h3>STORY</h3>
-<pre>ホニャホニャホニャホニャ。
-ホニャホニャホニャホニャ。
-もにゃもにゃ〜</pre>
-
-      </p>
-      <br>
-
-      <h3>PV</h3>
+<hr><br><br>
+      <h2>SEASON #01: PV</h2>
       <h3>1. ストーリー</h3>
-      [準備中]
+      [準備中]<br><br>
       <h3>2. 遊び方</h3>
-      [準備中]
+      [準備中]<br><br>
       <h3>3. 楽曲サンプル</h3>
       <p><iframe width="560" height="315" src="https://www.youtube.com/embed/gV2vT0X7esY?si=5vLpu5nSI7zmOKxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </iframe></p>
